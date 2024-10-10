@@ -1,4 +1,4 @@
-module github.com/onosproject/onos-lib-go
+module github.com/electronjoe/onos-lib-go
 
 go 1.19
 
@@ -77,3 +77,5 @@ require (
 	gopkg.in/square/go-jose.v1 v1.1.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/onosproject/onos-lib-go => github.com/electronjoe/onos-lib-go master

@@ -7,11 +7,13 @@ package asn1
 import (
 	"github.com/onosproject/onos-lib-go/pkg/errors"
 	"math"
+
+	asn1pb "github.com/onosproject/onos-lib-go/api/asn1/v1/asn1pb"
 )
 
 // UpdateValue - replace the bytes value with values from a new []byte
 // the size stays the same
-func (m *BitString) UpdateValue(newBytes []byte) ([]byte, error) {
+func (m *asn1pb.BitString) UpdateValue(newBytes []byte) ([]byte, error) {
 	if m == nil {
 		return m.Value, errors.NewInvalid("null")
 	}
@@ -25,7 +27,7 @@ func (m *BitString) UpdateValue(newBytes []byte) ([]byte, error) {
 
 // TruncateValue - truncates value of trailing bits in the BitString the size stays the same
 // Assuming that BitString has a non-empty length
-func (m *BitString) TruncateValue() ([]byte, error) {
+func (m *asn1pb.BitString) TruncateValue() ([]byte, error) {
 	if m == nil {
 		return m.Value, errors.NewInvalid("null")
 	}
